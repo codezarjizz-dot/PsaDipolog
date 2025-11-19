@@ -4,6 +4,80 @@
 	box-sizing: border-box;
 	 font-family: "Roboto Condensed", sans-serif;
 }
+/* Base menu styles */
+.mobileNav {
+    width: 100%;
+    background: #005bbb;
+    padding: 10px;
+    position: relative;
+}
+
+.mobileNav .subLink {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.mobileNav .subLink li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    display: block;
+}
+
+/* 🍔 Burger button (hidden on desktop) */
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ============================
+   📱 Mobile Responsive
+   ============================ */
+@media (max-width: 768px) {
+    .mobileNav {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Show burger button */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Hide menu initially */
+    .subLink {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #005bbb;
+        margin-top: 10px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    /* Show when active */
+    .subLink.active {
+        display: flex;
+    }
+
+    .subLink li a {
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        font-size: 20px;
+    }
+
+    .subLink li:last-child a {
+        border-bottom: none;
+    }
+}
 
 /*
 color number 1
@@ -539,9 +613,7 @@ crs Solid
 	padding: 8px;
 	background: var(--midDark);
 }
-.social{
 
-}
 .terms{
 	display: flex;
 	justify-content: right;
@@ -549,9 +621,7 @@ crs Solid
 
 	
 }
-.terms div{
-	
-}
+
 .terms p{
 	color: var(--light);
 	font-size: 24px;
@@ -597,8 +667,7 @@ crs Solid
   background-position-x: initial;
   background-position-y: initial;
   background-size: initial;
-  background-repeat-x: initial;
-  background-repeat-y: initial;
+  
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;

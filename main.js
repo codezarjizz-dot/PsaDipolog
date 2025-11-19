@@ -5,6 +5,11 @@ const announce = document.querySelector(".Announcements");
 const contacts = document.querySelector(".contact");
 const learBtn = document.querySelector(".learBtn");
 
+/**menubar */
+function toggleMenu() {
+    const menu = document.getElementById("menuList");
+    menu.classList.toggle("active");
+}
 
 function home(){
 	alert('asd');
