@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PSA-DIPOLOG</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" media="screen and (min-width: 480px)" href="mobile.css">
+<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="example2.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "StfgXYAzt3Lv-S6Bc",
+      });
+   })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="script.js" defer></script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<!--contact form-->
+		<div class="contact">
+			<h1 class="close">
+				<i class="fa fa-close" aria-hidden="true" onClick={closeContactModal()}></i>
+			</h1>
+			<div class="contact_us_2">
+				  <div class="responsive-container-block big-container">
+				   
+				    <div class="responsive-container-block container">
+				      <form class="form-box" id="form">
+				        <div class="container-block form-wrapper">
+
+				          <p class="text-blk contactus-head">
+				            Send Us Your Queries
+				          </p>
+				          <p class="text-blk contactus-subhead">
+				            PSA Office Brgy. Miputak Dipolog City Zamboanga Del Norte
+				          </p>
+				          <div class="responsive-container-block">
+				            <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt">
+				              <p class="text-blk input-title">
+				                FIRST NAME
+				              </p>
+				              <input class="input FirstName" id="ijowk" required name="FirstName" placeholder="Please enter first name...">
+				            </div>
+				            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+				              <p class="text-blk input-title">
+				                LAST NAME
+				              </p>
+				              <input class="input LastName" id="indfi" required	 name="LastName" placeholder="Please enter last name...">
+				            </div>
+				            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+				              <p class="text-blk input-title">
+				                EMAIL
+				              </p>
+				              <input type="email" class="input Email" id="ipmgh" required name="Email" placeholder="Please enter email...">
+				            </div>
+				            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+				              <p class="text-blk input-title">
+				                PHONE NUMBER
+				              </p>
+				              <input type="number" class="input PhoneNumber" id="imgis" required name="PhoneNumber" placeholder="Please enter phone number...">
+				            </div>
+				            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i">
+				              <p class="text-blk input-title">
+				                Please Specific your queries/request
+				              </p>
+				              <textarea class="textinput mssg" id="i5vyy" placeholder="Please enter query..."></textarea>
+				            </div>
+				          </div>
+				          <button class="submit-btn submit" onclick="sendEmail()">
+				            Submit
+				          </button>
+				        </div>
+				        
+				      </form>
+				    </div>
+				  </div>
+			</div>
+		</div>
+		<!--contact end-->
+		<div class="nationalIdContent">
+			<h1 class="close">
+				<i class="fa fa-close" aria-hidden="true" onClick={closeModalPid()}></i>
+			</h1>
+			<div class="pImg">
+				<img src="mainImage/nationalId.jpg" alt="phil-id logo">
+				<img src="mainImage/psalogo.jpg" alt="phil-id logo">
+				<h1>Kindly Proceed to Our designated PSA MOBILE OUTLET in Dipolog City</h1>
+				<hr>
+				<p>The ePhilID is a proactive strategy of the PSA that will allow more Filipinos to immediately enjoy the benefits of being PhilSys-registered.</p>
+				<p>For every registered person, a physical PhilID card is allocated. Registered person will still receive their physical PhilID card even if they claimed their ePhilID.</p>
+				<br/>
+				<a style="margin-left:50px;color: whitesmoke;text-decoration: none;font-size: 32px;border-radius: 10%;border:1px solid #fff;padding: 8px;background-color: cornflowerblue;" href="https://philsys.gov.ph/ephilid/" target="_blank" rel="noopener noreferrer">Read More</a>
+				
+			</div>
+			
+		</div>
+		<!--careers--->
+		<div class="careers">
+			<h1 class="close">
+				<i class="fa fa-close" aria-hidden="true" onClick={closeModalcareer()}></i>
+			</h1>
+			<div class="pImg">
+				<img src="mainImage/psalogo.jpg" alt="phil-id logo">
+				<h1>Good new's! want to Work With us? and have a Professional Career in PSA? We Have A Seats For You...</h1>
+				<a href="https://psa.gov.ph/career" target="_blank">Click Here to find jobs</a>
+			</div>
+			
+		</div>
+		<!--announcement-->
+		<div class="Announcements">
+			<h1 class="close">
+				<i class="fa fa-close" aria-hidden="true" onClick={closeModalAnounce()}></i>
+			</h1>
+			<div class="pImg">
+				<img src="mainImage/psalogo.jpg" alt="phil-id logo">
+				<h1>Announcement of Holidays and Offlines</h1>
+				<a href="https://www.timeanddate.com/holidays/philippines/2024" target="_blank">See HOLIDAYS</a>
+			</div>
+			
+		</div>
+
+		<!--CRS UNISYS SAKALAM--->
+		<div class="crsSolid">
+			<h1 class="close">
+				<i class="fa fa-close" aria-hidden="true" onclick={closeModalCrs()}></i>
+			</h1>
+			<div>
+				<div class="puni">
+					<img src="mainImage/psa1.jpg" width="100px" height="100px" />
+					<img src="mainImage/unisys.jpg" width="100px" height="100px"/>
+				</div>
+					<h1>Need A Document? Like</h1>
+			
+				<ul>
+					<li><i class="fa fa-book" aria-hidden="true"></i> BIRTH Certificates</li>
+					<li><i class="fa fa-circle-o" aria-hidden="true"></i> Marriage Certificates</li>
+					<li><i class="fa fa-cloud" aria-hidden="true"></i> Death Certificates</li>
+					<li><i class="fa fa-list-ol" aria-hidden="true"></i> Cenomar / Advisory on Marriage Certificates</li>
+				</ul>
+				<div class="imgHandler">
+					<img src="mainImage/unisys/dex.jpg" alt="dexter">
+					<img src="mainImage/unisys/crsPoy.jpg" alt="dexter">
+					<img src="mainImage/unisys/crsInside.jpg" alt="dexter">
+				</div>
+				<div class="uniLink">
+					<h2>Please follow our PSA/CRS <em>Online Appointment Guide</em> Kindly Click the Link below!</h2>
+					<a href="https://appointment.psa.gov.ph" target="_blank">Click here</a>
+
+				</div>
+					
+				
+			</div>
+			
+			
+		</div>
+		<header>
+			<nav>
+				<div class="headerLogo">
+					<img src="mainImage/logo/logo.png" width="70px" height="70px">
+					<h1>PSADIPOLOG</h1>
+				</div>
+				<ul>
+					
+				</ul>
+				<div class="emergency">
+					<p><i class="fa fa-phone-square"></i>Call: (065) 212-4853</p>
+
+				</div>
+				<a href="#" class="qoute" onclick={openContact()}>Get Quote</a>
+			</nav>
+		</header>		
+		<main>
+			<div class="categoriesLink">
+				<ul class="subLink">
+					<li><a href="#" onClick={national_ID()}>national id registration</a></li>
+					<li><a href="#" onClick={crs_SOLID()}>Psa/Crs appointment</a></li>
+					<li><a href="#" onClick={psaCareer()}>Careers</a></li>
+					<li><a href="#" onClick={Announcements()}>Announcements</a></li>
+					<li><a href="#" onclick={openContact()}>Contact</a></li>
+					
+				</ul>
+			</div>
+			<div class="hero">
+			<div class="details">
+  <h1 class="provincial">Provincial Statistical Office - Dipolog City</h1>
+  <p class="solid">Solid • Responsive • World Class</p>
+
+  <p class="desc">
+    The PSA shall primarily be responsible for the implementation of the objectives 
+    and provisions of R.A. 10625, R.A. 11055, and R.A. 11315. It shall plan, develop, 
+    prescribe, disseminate, and enforce policies, rules and regulations, and 
+    coordinate government-wide programs governing the production of official 
+    statistics, general purpose statistics, civil registration services, and 
+    inclusive identification system.
+    <br><br>
+    It shall primarily be responsible for all national censuses and surveys, 
+    sectoral statistics, community-based statistics, consolidation of selected 
+    administrative recording systems, and compilation of national accounts.
+  </p>
+
+  <div class="learn">
+    <button class="learnBtn">Learn More</button>
+  </div>
+</div>
+
+				<div class="heroImage">
+					<div class="banner">
+					</div>
+				</div>
+			</div>
+			
+		</main>
+		<div class="footer">
+			<div class="social-media-links social">
+				<div>
+					<a href="#" id="ix94i-2">
+						<img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+					  </a>
+					  <a href="#">
+						<img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+					  </a>
+					  <a href="#">
+						<img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+					  </a>
+					  <a href="#" id="izldf-2">
+						<img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+					  </a>
+				</div>
+					  
+			</div>
+			<div class="terms">
+				<div>
+					<p>&copy PSA-Dipolog 2025
+					terms and Conditions</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+<script defer src="main.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+
+
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+</html>
